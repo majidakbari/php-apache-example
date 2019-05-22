@@ -1,0 +1,41 @@
+version: '3.5'
+
+services:
+
+  ## --------------------------------------------------
+  ## | Web Server Php7.3.5-apache and required Extensions
+  ## --------------------------------------------------
+  app:
+    build:
+      context: ./.docker-compose/app
+      dockerfile: Dockerfile
+      args:
+        - WWW_DATA_USER_ID=${WWW_DATA_USER_ID}
+    volumes:
+      - ./src:/var/www/
+      - ./.docker-compose/app/config/php.ini:/usr/local/etc/php/php.ini
+    environment:
+      - WWW_DATA_USER_ID=${WWW_DATA_USER_ID}
+      - EXCLUDE_PORTS=443
+    ports:
+      - "127.0.0.1:9090:80"
+    restart: always
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+
+  ## --------------------------------------------------
+  ## | Percona DB
+  ## --------------------------------------------------
+  db:
+    image: percona:5.7.25
+    restart: always
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - "./data/db/mysql:/var/lib/mysql"
+    expose:
+      - "3306"
