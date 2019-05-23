@@ -33,15 +33,23 @@ Only the first time that you want to run the application, you need to execute th
 It will install the dependencies, creates .env laravel file, generates the application key, changes required directory permissions and migrates and seeds the database.
 
 ```bash
-cd /path-to-project
 docker-compose exec --user www-data app bootup
 ```
 
-#### Images/Containers
 
-##### app
+## API Documentation
+In the root of the project there is a postman collection which contains the API doc.
+Also you can find the API documentation in the following address.
+
+[API Documentation](https://documenter.getpostman.com/view/1493779/S1TPc1f6?version=latest#23c8dae8-278f-4f37-bc45-80fb8c333ddf)
+
+## Images/Containers
+
+#### app
 php:7.3.5-apache
-##### db
+#### db
 percona:5.7.25
+
+## Licence
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
