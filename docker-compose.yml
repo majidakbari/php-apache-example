@@ -30,7 +30,9 @@ services:
   ## | Percona DB
   ## --------------------------------------------------
   db:
-    image: percona:5.7.25
+    build:
+      context: ./.docker-compose/db
+      dockerfile: Dockerfile
     restart: always
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
