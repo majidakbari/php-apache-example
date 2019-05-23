@@ -1,5 +1,5 @@
 # Sample laravel project
-This project includes two docker containers based on `php-apache` and `percona` images.
+This project includes two docker containers based on `php-apache` and `mysql` images.
 
 It is under development, So I've mounted the source codes from host to the container. On production environment you should remove these volumes.
 
@@ -49,7 +49,7 @@ Also you can find the API documentation in the following address.
 php:7.3.5-apache
 
 `db`
-percona:5.7.25
+mysql:5.7.26
 
 ## Licence
 
