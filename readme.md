@@ -12,17 +12,19 @@ Clone this repository to your local machine using the following command
 git clone 
 ```
 
-### Running the containers
-```bash
-cd /path-to-project
-docker-compose up -d 
-```
 ### Environment variables
-Setting up the container (OS) level environment variables like $USER id. So every single file which is created or modified by container users will be owned by $USER because of id mappings.
+Setting up the container (OS) level environment variables like $USER id `WWW_DATA_USER_ID`. So every single file which is created or modified by container users will be owned by $USER because of user id mapping between the host and the containers.
 ```bash
 cd /path-to-project
 cp .env.example .env
 vim .env
+```
+
+
+### Running the containers
+Open terminal and type the following command:
+```bash
+docker-compose up -d 
 ```
 
 ### Bootup the application
