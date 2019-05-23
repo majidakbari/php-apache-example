@@ -30,7 +30,7 @@ docker-compose up -d
 ### Bootup the application
 
 Only the first time that you want to run the application, you need to execute the following command.
-It will install the dependencies, creates .env laravel file, generates the application key and migrates the database.
+It will install the dependencies, creates .env laravel file, generates the application key, changes required directory permissions and migrates and seeds the database.
 
 ```bash
 cd /path-to-project
