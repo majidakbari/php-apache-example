@@ -1,7 +1,7 @@
 # Sample laravel project
 This project includes two docker containers based on `php-apache` and `percona` images.
 
-This project is under development, So I've mounted the source codes from host to the container. On production environment you should remove these volumes.
+It is under development, So I've mounted the source codes from host to the container. On production environment you should remove these volumes.
 
 ## Installation guide
 Follow these steps to simply run this project.
