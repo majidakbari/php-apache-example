@@ -43,6 +43,12 @@ Also you can find the API documentation in the following address.
 
 [API Documentation](https://documenter.getpostman.com/view/1493779/S1TPc1f6?version=latest#23c8dae8-278f-4f37-bc45-80fb8c333ddf)
 
+## Tests
+To run tests, in the terminal type the following command:
+```bash
+docker-compose exec app vendor/bin/phpunit
+```
+
 ## Images/Containers
 
 `app`
