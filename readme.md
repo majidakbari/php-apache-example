@@ -11,10 +11,16 @@ Clone this repository to your local machine using the following command
 ```bash
 git clone 
 ```
-###Environment variables
+
+### Running the containers
+```bash
+cd /path-to-project
+docker-compose up -d 
+```
+### Environment variables
 Setting up the container (OS) level environment variables like $USER id. So every single file which is created or modified by container users will be owned by $USER because of id mappings.
 ```bash
-cd /path/to/project
+cd /path-to-project
 cp .env.example .env
 vim .env
 ```
@@ -25,7 +31,7 @@ Only the first time that you want to run the application, you need to execute th
 It will install the dependencies, creates .env laravel file, generates the application key and migrates the database.
 
 ```bash
-cd /path/to/project
+cd /path-to-project
 docker-compose exec --user www-data app bootup
 ```
 
