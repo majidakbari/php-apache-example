@@ -36,8 +36,8 @@ class FindAdminAssetsTest extends TestCase
 
         $assets = $assetRepository->findManyByCriteria(['is_admin' => true]);
 
-        $this->assertEquals(
-            Asset::query()->count(), $assets->count()
+        $this->assertCount(
+            Asset::query()->count(), $assets
         );
     }
 }
