@@ -16,3 +16,6 @@ printf "\033[0;32m > Migrating the database ...\n"
 (cd /var/www/ && \
 php artisan migrate --force )
 
+
+printf "\033[0;32m > Seeding the database ...\n"
+(cd /var/www/ && php artisan db:seed)

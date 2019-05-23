@@ -2,7 +2,7 @@
 
 return [
     'InvalidAcceptHeaderException' => 'This application only supports json response',
-    'NotFoundHttpException' => 'The requested route was not found in the application',
+    'NotFoundHttpException' => 'The requested route was not found on the server',
     'HttpResponseException' => 'Server error',
     'MethodNotAllowedHttpException' => 'Http method is invalid',
     'ValidationException' => 'Input Is Invalid',

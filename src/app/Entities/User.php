@@ -1,14 +1,21 @@
 <?php
 
-namespace App;
+namespace App\Entities;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Collection;
 
+
+/**
+ * Class User
+ * @property int $id
+ * @property string $first_name
+ * @property string $last_name
+ * @property Collection $roles
+ * @package App
+ */
 class User extends Authenticatable
 {
-    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -16,24 +23,26 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
+     * The roles that this user has
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'roles_users_pivot');
+    }
+
+
+    /**
+     * The groups that this user belongs to them
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class, 'users_groups_pivot');
+    }
 }
