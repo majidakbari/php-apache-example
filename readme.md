@@ -9,7 +9,7 @@ Follow these steps to simply run this project.
 ### Clone the project
 Clone this repository to your local machine using the following command
 ```bash
-git clone 
+git clone git@github.com:majidakbari/php-apache-example.git
 ```
 
 ### Environment variables
