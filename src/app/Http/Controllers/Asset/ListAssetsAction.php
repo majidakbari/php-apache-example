@@ -12,6 +12,9 @@ use Illuminate\Http\Request;
 
 /**
  * Class ListAssetsAction
+ * This class is responsible for handling asset.index api, It will return only json response
+ * based on user access level
+ * 
  * @package App\Http\Controllers\Asset
  */
 class ListAssetsAction

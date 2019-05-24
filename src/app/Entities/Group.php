@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Group
+ * Group Entity which extends eloquent
+ *
  * @property int $id
  * @property string $name
  * @package App\Entities

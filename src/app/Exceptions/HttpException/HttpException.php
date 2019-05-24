@@ -3,13 +3,16 @@
 namespace App\Exceptions\HttpException;
 
 use App\Exceptions\HttpException\Interfaces\iHttpException;
+use League\Flysystem\Adapter\AbstractAdapter;
 use Throwable;
 
 /**
  * Class HttpException
+ * This class is a base class that all application exception should extend it
+ *
  * @package App\Exceptions\HttpException
  */
-class HttpException extends \RuntimeException implements iHttpException
+Abstract class HttpException extends \RuntimeException implements iHttpException
 {
     /**
      * @var int

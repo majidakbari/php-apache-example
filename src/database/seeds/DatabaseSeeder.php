@@ -4,6 +4,9 @@ use Illuminate\Database\Seeder;
 
 /**
  * Class DatabaseSeeder
+ * This class is responsible for seeding database with dummy data so that
+ *
+ * the application will be testable.
  */
 class DatabaseSeeder extends Seeder
 {

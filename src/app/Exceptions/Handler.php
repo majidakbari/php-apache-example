@@ -17,6 +17,9 @@ use \Symfony\Component\HttpKernel\Exception\HttpException as SymfonyHttpExceptio
 
 /**
  * Class Handler
+ * Handling all application or user exception and generate proper HTTP responses
+ * for every single exception
+ *
  * @package App\Exceptions
  */
 class Handler extends ExceptionHandler

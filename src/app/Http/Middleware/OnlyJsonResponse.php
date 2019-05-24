@@ -5,6 +5,14 @@ namespace App\Http\Middleware;
 use App\Exceptions\HttpException\InvalidAcceptHeaderException;
 use Closure;
 
+/**
+ * Class OnlyJsonResponse
+ * This class will check the `Accept` header of the request and if it will equals to
+ * `application/json` or `star/star` will pass the request to the application,
+ * other wise will throw an exception
+ *
+ * @package App\Http\Middleware
+ */
 class OnlyJsonResponse
 {
     /**

@@ -15,8 +15,9 @@ use App\Repositories\Mysql\MysqlUserRepository;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Creating containers, this provider is not deferred ;)
  * Class AppServiceProvider
+ * This class is for Creating container, this provider is not deferred ;)
+ *
  * @package App\Providers
  */
 class AppServiceProvider extends ServiceProvider

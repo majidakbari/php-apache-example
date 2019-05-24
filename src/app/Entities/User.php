@@ -8,6 +8,8 @@ use Illuminate\Support\Collection;
 
 /**
  * Class User
+ * User Entity
+ *
  * @property int $id
  * @property string $first_name
  * @property string $last_name

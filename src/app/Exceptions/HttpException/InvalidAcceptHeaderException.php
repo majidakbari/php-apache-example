@@ -4,6 +4,9 @@ namespace App\Exceptions\HttpException;
 
 /**
  * Class InvalidAcceptHeaderException
+ * This class is a child of HttpException exception which will be thrown in case of
+ * requests contain invalid `accept` header
+ *
  * @package App\Exceptions\HttpException
  */
 class InvalidAcceptHeaderException extends HttpException

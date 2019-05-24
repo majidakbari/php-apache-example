@@ -8,6 +8,8 @@ use RuntimeException;
 
 /**
  * Class AdvancedThrottleRequests
+ * Smarter throttle middleware for API rate limiting security issue
+ *
  * @package App\Http\Middleware
  */
 class AdvancedThrottleRequests extends ThrottleRequests

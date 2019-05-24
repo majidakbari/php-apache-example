@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Role
+ * Role entity
+ *
  * @property int $id
  * @property string $name
  * @package App\Entities
