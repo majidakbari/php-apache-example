@@ -10,5 +10,4 @@ return [
     'UnauthorizedException' => 'Forbidden',
     'ModelNotFoundException' => 'Not found',
     'too_many_attempts' => 'Too many attempts',
-
 ];

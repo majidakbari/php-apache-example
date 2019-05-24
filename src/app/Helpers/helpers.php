@@ -24,7 +24,7 @@ if (!function_exists('get_paginate_params')) {
         $perPage = $request->get('perPage');
         $page    = $request->get('page');
 
-        if (empty($perPage) || is_array($perPage) || is_object($perPage) || intval($perPage) < 0 || intval($perPage) > 100) {
+        if (empty($perPage) || is_array($perPage) || is_object($perPage) || intval($perPage) < 0 || intval($perPage) > 500) {
             $perPage = 10;
         }
         if (empty($page) || is_array($page) || is_object($page) || (intval($page) < 0)) {
