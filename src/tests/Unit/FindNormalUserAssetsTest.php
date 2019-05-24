@@ -12,6 +12,8 @@ use Tests\TestCase;
 
 /**
  * Class FindNormalUserAssetsTest
+ * Unit test for testing the repository functionality
+ *
  * @package Tests\Unit
  */
 class FindNormalUserAssetsTest extends TestCase

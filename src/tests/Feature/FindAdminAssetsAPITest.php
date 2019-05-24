@@ -8,8 +8,8 @@ use Tests\TestCase;
 
 /**
  * Class FindAdminAssetsAPITest
- * This class will call the application by http requests and compare the status code and the response body with
- * the desire ones
+ * This class will call the application by http request and compare the status code and the response body with
+ * the desired ones
  *
  * @package Tests\Feature
  */

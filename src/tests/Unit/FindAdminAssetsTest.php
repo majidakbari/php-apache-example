@@ -8,6 +8,8 @@ use Tests\TestCase;
 
 /**
  * Class FindAdminAssetsTest
+ * Unit test for testing the repository functionality
+ *
  * @package Tests\Unit
  */
 class FindAdminAssetsTest extends TestCase
