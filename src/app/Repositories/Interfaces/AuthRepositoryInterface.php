@@ -11,8 +11,9 @@ use App\Entities\User;
 interface AuthRepositoryInterface
 {
     /**
+     * @param int|string $authorizationHeader
      * @return User|null
      */
-    public function user();
+    public function user($authorizationHeader = 0);
 
 }

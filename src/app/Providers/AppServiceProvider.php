@@ -8,7 +8,7 @@ use App\Repositories\Interfaces\GroupRepositoryInterface;
 use App\Repositories\Interfaces\RoleRepositoryInterface;
 use App\Repositories\Interfaces\UserRepositoryInterface;
 use App\Repositories\Mysql\MysqlAssetRepository;
-use App\Repositories\Mysql\MysqlAuthRepository;
+use App\Repositories\Mock\MockAuthRepository;
 use App\Repositories\Mysql\MysqlGroupRepository;
 use App\Repositories\Mysql\MysqlRoleRepository;
 use App\Repositories\Mysql\MysqlUserRepository;
@@ -52,6 +52,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(AssetRepositoryInterface::class, MysqlAssetRepository::class);
         $this->app->bind(GroupRepositoryInterface::class, MysqlGroupRepository::class);
         $this->app->bind(RoleRepositoryInterface::class, MysqlRoleRepository::class);
-        $this->app->bind(AuthRepositoryInterface::class, MysqlAuthRepository::class);
+        $this->app->bind(AuthRepositoryInterface::class, MockAuthRepository::class);
     }
 }

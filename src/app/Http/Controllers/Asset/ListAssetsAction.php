@@ -46,7 +46,7 @@ class ListAssetsAction
     public function __invoke(Request $request) :JsonResponse
     {
         $result = $this->assetRepository->findManyByCriteria(
-            $this->getCriteria(),
+            $this->getCriteria($request->header('authorization')),
             get_paginate_params($request)
         );
 
@@ -55,22 +55,24 @@ class ListAssetsAction
 
 
     /**
-     * Because I did not handle the authentication and can not retrieve the logged in user, this function will randomly
-     * returns a user who has Normal or Admin role
+     * Because I did not handle the authentication and can not retrieve the logged in user, this function will
+     * returns a user who has Admin role if the input argument equals to `1`
+     * @param int|string $authorizationHeader
      * @return User
      */
-    private function getLoggedInUser(): ?User
+    private function getLoggedInUser($authorizationHeader)
     {
-        return $this->authRepository->user();
+        return $this->authRepository->user($authorizationHeader);
     }
 
 
     /**
+     * @param int|string $authorizationHeader
      * @return array
      */
-    private function getCriteria(): array
+    private function getCriteria($authorizationHeader): array
     {
-        $user = $this->getLoggedInUser();
+        $user = $this->getLoggedInUser($authorizationHeader);
         $isAdmin = false;
 
         /** @var Role $role */
