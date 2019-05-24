@@ -15,9 +15,13 @@
 						"header": [
 							{
 								"key": "Accept",
-								"value": "",
-								"type": "text",
-								"disabled": true
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "1",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -44,7 +48,7 @@
 								}
 							]
 						},
-						"description": "This endpoint will return assets based on user access level. Because we are testing this API it will randomly reutrn all assets (Admin access) or a user's assets(Normal user access)."
+						"description": "This endpoint will return assets based on user access level. Because we are testing this API it will reutrn all assets (Admin access) or a user's assets(Normal user access) by simply sending `Authorization` header equals to 1 (admin) or 0 (normal users)."
 					},
 					"response": [
 						{

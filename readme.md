@@ -38,7 +38,7 @@ docker-compose exec --user www-data app bootup
 
 
 ## API Documentation
-In the root of the project there is a postman collection which contains the API doc.
+In the src directory of the project there is a postman collection which contains the API doc.
 Also you can find the API documentation in the following address.
 
 [API Documentation](https://documenter.getpostman.com/view/1493779/S1TPc1f6?version=latest#23c8dae8-278f-4f37-bc45-80fb8c333ddf)
