@@ -3,7 +3,6 @@
 namespace App\Exceptions\HttpException;
 
 use App\Exceptions\HttpException\Interfaces\iHttpException;
-use League\Flysystem\Adapter\AbstractAdapter;
 use Throwable;
 
 /**

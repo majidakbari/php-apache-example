@@ -10,7 +10,5 @@ return [
     'UnauthorizedException' => 'Forbidden',
     'ModelNotFoundException' => 'Not found',
     'too_many_attempts' => 'Too many attempts',
-    'OauthServerException' => 'Oauth server is unavailable',
-    'ReviewAlreadyExistException' => 'You have left a review on this profile before',
 
 ];
